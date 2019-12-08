@@ -47,9 +47,13 @@ img {
     padding: 10px;
 }
 
+.cover-image-caption {
+    display: none;
+}
+
 h1 {
     font-size: 45px;
-    background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(42, 179, 0, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bebas Neue', cursive;
@@ -73,7 +77,7 @@ h1 {
 p {
     line-height: 1.3em;
     font-size: 1.2em;
-    font-family: 'Playfair Display', serif;
+    font-family: 'PT Serif', serif;
 }
 
 .dropcap {
@@ -88,7 +92,7 @@ p {
 
 .pullquote_tl {
     font-size: 30px;
-    background: -webkit-linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(42, 179, 0, 1) 100%);
+    background: -webkit-linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bebas Neue', cursive;
@@ -96,12 +100,54 @@ p {
 
 .pullquote_br {
     font-size: 25px;
-    background: -webkit-linear-gradient(320deg, rgba(0, 0, 0, 1) 0%, rgba(42, 179, 0, 1) 100%);
+    background: -webkit-linear-gradient(320deg, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bebas Neue', cursive;
 }
 
+/* for animated scroll arrow */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.arrow_background {
+    background-color: rgb(0, 0, 0);
+}
+
+.arrow {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    z-index: 2;
+}
+
+.arrow_hidden {
+    display: none;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* animated scroll arrow end */
 .interactive {
     background-color: rgb(0, 0, 0);
     position: relative;
@@ -109,26 +155,31 @@ p {
 
 .graphic {
     background-color: rgb(0, 0, 0);
-    height: 600px;
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    padding: 7px;
+    padding: 10px;
 }
 
 .sticky {
-    max-width: 375px;
-    margin: 0 auto;
+    max-width: 414px;
+    max-height: 736;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-evenly;
 }
 
 .dot {
-    height: 7px;
-    width: 7px;
+    height: 5px;
+    width: 5px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    display: inline-block;
     transition: all 0.5s ease-in-out;
     opacity: 0;
+    margin: 1px;
 }
 
 /*the background colors will be swapped once the */
@@ -141,36 +192,38 @@ p {
 }
 
 .dot_sell {
-    background-color: #2DBF00;
+    background-color: #11BD10;
 }
 
 .txt_sale {
-    color: #2DBF00;
+    color: #11BD10;
 }
 
 .dot_possession {
-    background-color: #1E8000;
+    background-color: #0A800A;
 }
 
 .txt_possession {
-    color: #1E8000;
+    color: #0A800A;
 }
 
 .dot_default {
-    background-color: #EDFF00;
+    background-color: #14FF14;
 }
 
 .txt_default {
-    color: #EDFF00;
+    color: #14FF14;
 }
 
 .dot_smuggle {
-    background-color: #3CFF00;
+    background-color: #055300;
 }
 
 .txt_smuggle {
-    color: #3CFF00;
+    color: #055300;
 }
+
+/*
 
 .dot_scale {
     border: 1px solid rgba(42, 179, 0, 1);
@@ -181,26 +234,27 @@ p {
 }
 
 .text_scale {
-    display: inline-block;
+    display: none;
     font-size: 14px;
-    color: rgba(0, 0, 0);
+    color: rgba(42, 179, 0, 1);
     margin: 0;
     position: relative;
     left: 5px;
 }
 
-.scale_appear {
-    color: rgba(42, 179, 0, 1)
+.text_scale_appear {
+    display: inline-block;
 }
 
+*/
 .spacer {
     width: 100%;
-    height: 700px;
+    height: 1000px;
 }
 
 .final_spacer {
     width: 100%;
-    height: 700px;
+    height: 1000px;
     background-color: #000000;
 }
 
@@ -219,8 +273,8 @@ p {
 * After we start seeing metrics
 */
 .metrics .dot {
-    height: 20px;
-    width: 20px;
+    height: 9px;
+    width: 9px;
 }
 
 .metrics .no_conviction {
@@ -233,14 +287,258 @@ p {
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
+
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .header_image {
+        float: right;
+        max-height: 100vh;
+        max-width: 50vw;
+        padding-bottom: 0px;
+    }
+
+    .header_container {
+        float: left;
+        max-height: 100vh;
+        max-width: 50vw;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .full-header {
+        padding: 0;
+        padding-bottom: 600px;
+    }
+
+    h1 {
+        font-size: 50px;
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .dek {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .publish-info {
+        margin: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 80px;
+        margin: 0 auto;
+    }
+
+    #text_box {
+        background-color: rgba(0, 0, 0, 0.75);
+        border-color: #ffffff;
+        color: #ffff;
+        min-height: 50px;
+        position: relative;
+        z-index: 2;
+        padding: 10px;
+        width: 50vw;
+        float: right;
+    }
 }
 
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
-@media(min-width: 729px) {
+@media(min-width: 769px) {
+
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
+    .header_image {
+        float: right;
+        max-height: 100vh;
+        max-width: 50vw;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+
+    .header_container {
+        float: left;
+        max-height: 100vh;
+        max-width: 50vw;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .full-header {
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 60px;
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .dek {
+        font-family: 'Nunito', sans-serif;
+        font-size: 25px;
+    }
+
+    .img_caption {
+        font-family: 'Nunito', sans-serif;
+        font-size: 13px;
+    }
+
+    .cover-image-caption {
+        text-align: right;
+        display: flex;
+        width: 50vw;
+        margin-left: 50%
+    }
+
+    .publish-info {
+        margin: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 80px;
+        margin: 0 auto;
+    }
+}
+
+/*********************************************************************
+*********************************************************************/
+@media(min-width: 1025px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+    .header_image {
+        float: right;
+        max-height: 100vh;
+        max-width: 50vw;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+
+    .header_container {
+        float: left;
+        max-height: 100vh;
+        max-width: 50vw;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 172px;
+    }
+
+    .full-header {
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 60px;
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .dek {
+        font-family: 'Nunito', sans-serif;
+        font-size: 25px;
+    }
+
+    .img_caption {
+        font-family: 'Nunito', sans-serif;
+        font-size: 13px;
+    }
+
+    .cover-image-caption {
+        text-align: right;
+        display: flex;
+        width: 50vw;
+        margin-left: 50%
+    }
+
+    .publish-info {
+        margin: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 80px;
+        margin: 0 auto;
+    }
+}
+
+/*********************************************************************
+*********************************************************************/
+@media(min-width: 1441px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+    .header_image {
+        float: right;
+        max-height: 100vh;
+        max-width: 50vw;
+        padding-bottom: 0px;
+        overflow: hidden;
+    }
+
+    .header_container {
+        float: left;
+        max-height: 100vh;
+        max-width: 50vw;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 172px;
+    }
+
+    .full-header {
+        padding: 0;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 100px;
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    .dek {
+        font-family: 'Nunito', sans-serif;
+        font-size: 25px;
+    }
+
+    .img_caption {
+        font-family: 'Nunito', sans-serif;
+        font-size: 13px;
+    }
+
+    .cover-image-caption {
+        text-align: right;
+        display: flex;
+        width: 50vw;
+        margin-left: 50%
+    }
+
+    .publish-info {
+        margin: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 80px;
+        margin: 0 auto;
+    }
 }

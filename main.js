@@ -7,13 +7,21 @@ $(document).ready(() => {
 				const $dot = $(this);
 
 				$dot.addClass("dot_appear");
-			}, 20 * (1 + (i / 10)));
+			}, 10 * (1 + (i / 10)));
 
 		});
 
-		$(".text_scale").addClass("scale_appear");
+		$(".arrow").addClass("arrow_hidden");
 
 	});
+
+
+
+
+
+
+
+
 
 	//	watcher.outView(() => {
 	//		$(".dot.dot_appear").removeClass("dot_appear");
@@ -23,14 +31,6 @@ $(document).ready(() => {
 });
 
 
-
-$(document).ready(() => {
-	const watcher = new Watch($("#all_conviction"));
-
-	watcher.inView(() => {
-		$(".dot_scale").addClass("dot_scale_appear");
-	});
-});
 
 
 
