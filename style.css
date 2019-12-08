@@ -53,7 +53,7 @@ img {
 
 h1 {
     font-size: 45px;
-    background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bebas Neue', cursive;
@@ -92,7 +92,7 @@ p {
 
 .pullquote_tl {
     font-size: 30px;
-    background: -webkit-linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+    background: -webkit-linear-gradient(140deg, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bebas Neue', cursive;
@@ -100,7 +100,7 @@ p {
 
 .pullquote_br {
     font-size: 25px;
-    background: -webkit-linear-gradient(320deg, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+    background: -webkit-linear-gradient(320deg, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Bebas Neue', cursive;
@@ -193,35 +193,35 @@ a {
 }
 
 .dot_sell {
-    background-color: #11BD10;
+    background-color: #8894BF;
 }
 
 .txt_sale {
-    color: #11BD10;
+    color: #8894BF;
 }
 
 .dot_possession {
-    background-color: #0A800A;
+    background-color: #BF9488;
 }
 
 .txt_possession {
-    color: #0A800A;
+    color: #BF9488;
 }
 
 .dot_default {
-    background-color: #14FF14;
+    background-color: #3A4C8C;
 }
 
 .txt_default {
-    color: #14FF14;
+    color: #3A4C8C;
 }
 
 .dot_smuggle {
-    background-color: #055300;
+    background-color: #F4AEC0;
 }
 
 .txt_smuggle {
-    color: #055300;
+    color: #F4AEC0;
 }
 
 /*
@@ -312,7 +312,7 @@ a {
 
     h1 {
         font-size: 50px;
-        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: 'Bebas Neue', cursive;
@@ -382,7 +382,7 @@ a {
 
     h1 {
         font-size: 60px;
-        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: 'Bebas Neue', cursive;
@@ -447,7 +447,7 @@ a {
 
     h1 {
         font-size: 60px;
-        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: 'Bebas Neue', cursive;
@@ -512,7 +512,7 @@ a {
 
     h1 {
         font-size: 100px;
-        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(212, 157, 112, 1) 100%);
+        background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: 'Bebas Neue', cursive;
