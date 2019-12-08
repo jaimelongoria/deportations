@@ -170,7 +170,7 @@ a {
     justify-content: center;
     align-items: center;
     align-content: space-evenly;
-    z-index: 1;
+    z-index: 0;
 }
 
 .dot {
