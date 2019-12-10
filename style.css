@@ -40,6 +40,10 @@ img {
     max-height: 100%;
 }
 
+.photo {
+    margin: 0 auto;
+}
+
 .img_caption {
     font-family: 'Nunito', sans-serif;
     font-size: 13px;
@@ -88,6 +92,48 @@ p {
     padding-top: 4px;
     padding-right: 8px;
     padding-left: 3px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: #74d0ed;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid black 2px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+    font-size: .6em;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 120px;
 }
 
 .pullquote_tl {
@@ -192,6 +238,10 @@ a {
     background-color: gray;
 }
 
+.txt_no_conviction {
+    color: gray;
+}
+
 .dot_sell {
     background-color: #8894BF;
 }
@@ -224,6 +274,14 @@ a {
     color: #F4AEC0;
 }
 
+.dot_conclude {
+    background-color: #8894BF;
+}
+
+.txt_conclude {
+    color: #8894BF
+}
+
 /*
 
 .dot_scale {
@@ -250,7 +308,7 @@ a {
 */
 .spacer {
     width: 100%;
-    height: 1000px;
+    height: 1200px;
 }
 
 .final_spacer {
@@ -327,9 +385,20 @@ a {
         padding-bottom: 20px;
     }
 
+    iframe {
+        float: right;
+        width: 45%;
+        height: 120px;
+    }
+
+    .photo {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
     .container {
         max-width: 800px;
-        padding: 80px;
+        padding: 65px;
         margin: 0 auto;
     }
 
@@ -412,7 +481,7 @@ a {
 
     .container {
         max-width: 800px;
-        padding: 80px;
+        padding: 35px;
         margin: 0 auto;
     }
 }
@@ -474,12 +543,6 @@ a {
         margin: 20px;
         padding-bottom: 20px;
     }
-
-    .container {
-        max-width: 800px;
-        padding: 80px;
-        margin: 0 auto;
-    }
 }
 
 /*********************************************************************
@@ -538,11 +601,5 @@ a {
     .publish-info {
         margin: 20px;
         padding-bottom: 20px;
-    }
-
-    .container {
-        max-width: 800px;
-        padding: 80px;
-        margin: 0 auto;
     }
 }
