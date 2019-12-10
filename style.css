@@ -145,7 +145,7 @@ iframe {
 }
 
 .pullquote_br {
-    font-size: 25px;
+    font-size: 30px;
     background: -webkit-linear-gradient(320deg, rgba(0, 0, 0, 1) 0%, rgba(196, 230, 241, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
