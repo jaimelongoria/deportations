@@ -131,6 +131,10 @@ p {
     visibility: visible;
 }
 
+.tooltip:click .tooltiptext {
+    visibility: visible;
+}
+
 iframe {
     width: 100%;
     height: 120px;
